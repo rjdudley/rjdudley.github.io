@@ -36,7 +36,7 @@ AWS provides us a couple ways to administer its services.  You can interact via 
 
 Once installation is complete, you can open the Terminal and run "aws --version".  If that works, you're good to go with configuration.  The most important configuration is the access keys the CLI will use to connect to AWS service APIs.  Although you can use your root user login, it's not a good idea.  Instead, you should create a new IAM user for the CLI.  This is done in the AWS console, and there are a lot of steps in creating a new IAM user, but you can't really screw anything up.  Worst case, delete the user and start over.  In step 2 of the wizard (image below) you're asked to put the new user in a group or attach directly to an IAM profile.  For now, it will be easiest if you attach directly to the AdministrativeAccess profile. We can always titrate this down later, but there are 580+ profiles to sort through and we don't know which ones we need yet.
 
-![user wizard step 2](images/user_wizard_step_2.png)
+![user wizard step 2](user_wizard_step_2.png)
 
 Once your new IAM user is created, you'll need to follow the configuration for credential file settings at https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html.  That's all we need for now.
 
