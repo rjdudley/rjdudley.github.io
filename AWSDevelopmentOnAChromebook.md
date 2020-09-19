@@ -24,6 +24,10 @@ After you're done, make sure to open the Terminal and run "sudo apt-get update" 
 
 Here we are in the CLI!  Microsoft's instructions can be found at [https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions).  Crostini is a newer Debian-based distro so it's only a couple simple steps.
 
+There is an easier way to install, though.  You can downoad the .deb package from the official site, then right-click the package and choose "Install with Linux (Beta)" from the menu.  The installer will run for a minute or two, and presto!  VS Code will be installed.
+
+![install VS Code from .deb package](/images/vscode_install_1.png)
+
 3. Add CloudFormation Extensions
 
 A moment of truth!  Open VS Code, and if it runs, great job!  Now it's time for an extension to make our development easier, the CloudFormation extension, [https://marketplace.visualstudio.com/items?itemName=aws-scripting-guy.cform](https://marketplace.visualstudio.com/items?itemName=aws-scripting-guy.cform).
@@ -36,7 +40,7 @@ AWS provides us a couple ways to administer its services.  You can interact via 
 
 Once installation is complete, you can open the Terminal and run "aws --version".  If that works, you're good to go with configuration.  The most important configuration is the access keys the CLI will use to connect to AWS service APIs.  Although you can use your root user login, it's not a good idea.  Instead, you should create a new IAM user for the CLI.  This is done in the AWS console, and there are a lot of steps in creating a new IAM user, but you can't really screw anything up.  Worst case, delete the user and start over.  In step 2 of the wizard (image below) you're asked to put the new user in a group or attach directly to an IAM profile.  For now, it will be easiest if you attach directly to the AdministrativeAccess profile. We can always titrate this down later, but there are 580+ profiles to sort through and we don't know which ones we need yet.
 
-![user wizard step 2](/user_wizard_step_2.png)
+![user wizard step 2](/images/user_wizard_step_2.png)
 
 Once your new IAM user is created, you'll need to follow the configuration for credential file settings at [https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).  That's all we need for now.
 
@@ -51,7 +55,7 @@ Installation for Linuz is found at [https://git-scm.com/download/linux](https://
 
 Notes:
 
-The crouton project can be used to install Ubuntu side-by-side with Chrome OS (see [https://ubuntu.com/tutorials/install-ubuntu-on-chromebook#1-overview](https://ubuntu.com/tutorials/install-ubuntu-on-chromebook#1-overview)) but this is not a supported installtion.  It would provide a more native Linux experience, though.
+The crouton project may be able to be used to install Ubuntu side-by-side with Chrome OS (see [https://ubuntu.com/tutorials/install-ubuntu-on-chromebook#1-overview](https://ubuntu.com/tutorials/install-ubuntu-on-chromebook#1-overview)) but this is not a supported installtion.  It would provide a more native Linux experience, though.
 
 Deeper info about Crostini at [https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md](https://chromium.googlesource.com/chromiumos/docs/+/master/containers_and_vms.md)
 
